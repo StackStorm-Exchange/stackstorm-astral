@@ -7,6 +7,10 @@ on sun position for a geo lat/long coordinates:
 
 Copy and edit the astral.yaml.example into the /opt/stackstorm/configs directory.
 
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
+
 ### Triggers:
 
 ```text
