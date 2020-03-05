@@ -12,7 +12,14 @@ limitations under the License.
 """
 
 from st2common.runners.base_action import Action
-from astral import Location
+
+try:
+    # The astral module was broken up into a package in astral 2.0, so use
+    # the updated import
+    from astral.location import Location
+except ImportError:
+    # Astral only installs <1.10 for Python < 3, so use the old import
+    from astral import Location
 
 
 class BaseAction(Action):
